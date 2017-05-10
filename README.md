@@ -1,1 +1,1 @@
-# digitalArt
+# Digital Art
