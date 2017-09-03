@@ -1,0 +1,7 @@
+{
+  "name": "dada",
+  "short_name": "dada",
+  "description": "plop",
+  "start_url": "/",
+  "display": "standalone"
+}
