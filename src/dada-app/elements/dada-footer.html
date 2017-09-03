@@ -1,0 +1,41 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+
+<dom-module id="dada-footer">
+  <template>
+    <style>
+      :host {
+        display: flex;
+      }
+    </style>
+    
+    <div>Restez informés</div>
+    <input type="email" name="mail" value="mon mail"></input>
+    <paper-button raised class="indigo">M'inscrire à la newsletter</paper-button>
+    <div>plop</div>
+    <div>plop</div>
+    <div>plop</div>
+    <div>plop</div>
+    <div>plop</div>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class DadaFooter extends Polymer.Element {
+      static get is() { return 'dada-footer'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'dada-footer'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(DadaFooter.is, DadaFooter);
+  </script>
+</dom-module>

@@ -1,5 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
-
+<link rel="import" href="elements/dada-header.html">
+<link rel="import" href="elements/dada-footer.html">
+<link rel="import" href="elements/dada-action.html">
 <dom-module id="dada-app">
   <template>
     <style>
@@ -7,9 +9,11 @@
         display: block;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <dada-header></dada-header>
+    <dada-action></dada-action>
+    <dada-footer></dada-footer>
   </template>
-
+  
   <script>
     /**
      * @customElement
@@ -19,10 +23,7 @@
       static get is() { return 'dada-app'; }
       static get properties() {
         return {
-          prop1: {
-            type: String,
-            value: 'dada-app'
-          }
+      
         };
       }
     }
