@@ -1,28 +1,30 @@
-# \<dada\>
+# DADA Project
 
-plop
+Virtual visit of museums or little expositions with VR headset or with your PC screen 
 
-## Install the Polymer-CLI
+## To run the application locally
+  
+  ## Install the Polymer-CLI
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
+  First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve     your application locally.
+  
+  ## Building Your Application
 
-## Viewing Your Application
+  ```
+  $ polymer build
+  ```
 
-```
-$ polymer serve
-```
+  This will create builds of your application in the `build/` directory, optimized to be served in production. You can then serve the       built versions by giving `polymer serve` a folder to serve from:
 
-## Building Your Application
+  ```
+  $ polymer serve build/default
+  ```
 
-```
-$ polymer build
-```
+  ## Viewing Your Application
 
-This will create builds of your application in the `build/` directory, optimized to be served in production. You can then serve the built versions by giving `polymer serve` a folder to serve from:
-
-```
-$ polymer serve build/default
-```
+  ```
+  $ polymer serve
+  ```
 
 ## Running Tests
 
