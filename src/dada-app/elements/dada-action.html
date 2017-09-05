@@ -8,21 +8,30 @@
              :host {
                 display: block;
             }
+
+           /* a retester 
+            .container{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                width:100%;
+                justify-content: center;
+            }*/
         </style>
         <paper-tabs selected="{{selected}}" scrollable>
-            <paper-tab on-click="_activeChanged">Choisir</paper-tab>
+            <paper-tab class="test" on-click="_activeChanged"><iron-icon icon="hardware:phonelink"></iron-icon>Choisir</paper-tab>
             <paper-tab on-click="_activeChanged">Acheter</paper-tab>
-            <paper-tab on-click="_activeChanged">Visiter</paper-tab>
+            <paper-tab on-click="_activeChanged"><iron-icon icon="icons:visibility"></iron-icon> Visiter</paper-tab>
         </paper-tabs>
-
+         
         <iron-collapse id="collapse">
             <iron-pages selected="{{selected}}">
-                <div on-click="closeCollapse">One</div>
-                <div on-click="closeCollapse">Two</div>
-                <div on-click="closeCollapse">Three</div>
+                <div>One<iron-icon icon="icons:close" on-click="closeCollapse"></div>
+                <div>Two<iron-icon icon="icons:close" on-click="closeCollapse"></div>
+                <div>Three<iron-icon icon="icons:close" on-click="closeCollapse"></div>
             </iron-pages>
         </iron-collapse>
-
+      
 
     </template>
 
