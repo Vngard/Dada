@@ -1,12 +1,26 @@
 <link rel="import" href="../../../bower_components/iron-collapse/iron-collapse.html">
 <link rel="import" href="../../../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="dada-table.html">
 
 <dom-module id="dada-action">
     <template>
         <style>
              :host {
                 display: block;
+            }
+
+            .papertabs-style {
+                --paper-tabs-selection-bar-color: #DA30B7;
+                --paper-tabs-container: {
+                    width:100%;
+                } 
+            }
+
+            .papertab-style {
+                --paper-tabs-container: {
+                    width:33.3%;
+                } 
             }
 
            /* a retester 
@@ -18,16 +32,16 @@
                 justify-content: center;
             }*/
         </style>
-        <paper-tabs selected="{{selected}}" scrollable>
-            <paper-tab class="test" on-click="_activeChanged"><iron-icon icon="hardware:phonelink"></iron-icon>Choisir</paper-tab>
-            <paper-tab on-click="_activeChanged">Acheter</paper-tab>
-            <paper-tab on-click="_activeChanged"><iron-icon icon="icons:visibility"></iron-icon> Visiter</paper-tab>
+        <paper-tabs class="papertabs-style" selected="{{selected}}" scrollable>
+            <paper-tab class="papertab-style" on-click="_activeChanged"><iron-icon icon="hardware:phonelink"></iron-icon>Choisir</paper-tab>
+            <paper-tab class="papertab-style" on-click="_activeChanged">Acheter</paper-tab>
+            <paper-tab class="papertab-style" on-click="_activeChanged"><iron-icon icon="icons:visibility"></iron-icon> Visiter</paper-tab>
         </paper-tabs>
          
         <iron-collapse id="collapse">
             <iron-pages selected="{{selected}}">
                 <div>One<iron-icon icon="icons:close" on-click="closeCollapse"></div>
-                <div>Two<iron-icon icon="icons:close" on-click="closeCollapse"></div>
+                <div><dada-table></dada-table><iron-icon icon="icons:close" on-click="closeCollapse"></div>
                 <div>Three<iron-icon icon="icons:close" on-click="closeCollapse"></div>
             </iron-pages>
         </iron-collapse>

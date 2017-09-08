@@ -1,0 +1,80 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="dada-table">
+    <template>
+        <style>
+             :host {
+                display: flex;
+                justify-content: center;
+            }
+
+            table{
+                margin:2em;
+                width:80%;
+            }
+            
+
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                padding: 5px;
+            }
+
+            th {
+                text-align: center;
+            }
+
+            .content-align {
+                text-align: center;
+            }
+        </style>
+
+        <table>
+            <tr>
+                <th></th>
+                <th><b>Prix unitaire</b></th>
+                <th colspan="3"><b>Abonnements</b></th>
+            </tr>
+            <tr>
+                <td><b>Nombre de e-visites</b></td>
+                <td class="content-align">1</td>
+                <td class="content-align">3</td>
+                <td class="content-align">5</td>
+                <td class="content-align">10</td>
+            </tr>
+            <tr>
+                <td><b>Tarif unitaire de l'offre</b></td>
+                <td class="content-align">7€</td>
+                <td class="content-align">18€</td>
+                <td class="content-align">32€</td>
+                <td class="content-align">64€</td>
+            </tr>
+        </table>
+    </template>
+
+    <script>
+        /**
+     * @customElement
+     * @polymer
+     */
+        class DadaTable extends Polymer.Element {
+            static get is() { return 'dada-table'; }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'dada-table'
+                    }
+                };
+            }
+        }
+
+        window.customElements.define(DadaTable.is, DadaTable);
+    </script>
+</dom-module>
