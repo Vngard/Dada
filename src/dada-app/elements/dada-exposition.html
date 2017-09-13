@@ -1,62 +1,39 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../../bower_components/paper-button/paper-button.html">
 
-<dom-module id="dada-table">
-<template>
-<style>
-:host {
-    margin:0;
-    padding:0;
-    background: url(../../img/Magritte-top.jpg) no-repeat center fixed; 
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover; /* version standardisée */
-}
+<dom-module id="dada-exposition">
+    <template>
+        <style>
+             :host {
+                margin: 0;
+                padding: 0;
+                background: url(../../img/Magritte-top.jpg) no-repeat center fixed;
+                -webkit-background-size: cover;
+                /* pour anciens Chrome et Safari */
+                background-size: cover;
+                /* version standardisée */
+            }
+        </style>
 
-</style>
+    </template>
 
-<table>
-<tr>
-<th></th>
-<th><b>Prix unitaire</b></th>
-<th colspan="3"><b>Abonnements</b></th>
-</tr>
-<tr>
-<td><b>Nombre de e-visites</b></td>
-<td class="content-align">1</td>
-<td class="content-align">3</td>
-<td class="content-align">5</td>
-<td class="content-align">10</td>
-</tr>
-<tr>
-<td><b>Tarif unitaire de l'offre</b></td>
-<td class="content-align">7€</td>
-<td class="content-align">18€</td>
-<td class="content-align">32€</td>
-<td class="content-align">64€</td>
-</tr>
-</table>
-<div>
-<paper-button raised noink class="custom"><a href="">Achetez vos places</a></paper-button>
-</div>
-</template>
-
-<script>
-/**
+    <script>
+        /**
 * @customElement
 * @polymer
 */
-class DadaTable extends Polymer.Element {
-static get is() { return 'dada-table'; }
-static get properties() {
-return {
-prop1: {
-type: String,
-value: 'dada-table'
-}
-};
-}
-}
+        class DadaExposition extends Polymer.Element {
+            static get is() { return 'dada-exposition'; }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'dada-exposition'
+                    }
+                };
+            }
+        }
 
-window.customElements.define(DadaTable.is, DadaTable);
-</script>
+        window.customElements.define(DadaExposition.is, DadaExposition);
+
+    </script>
 </dom-module>
