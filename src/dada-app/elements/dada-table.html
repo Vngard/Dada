@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
 
 <dom-module id="dada-table">
     <template>
@@ -8,11 +9,11 @@
                 justify-content: center;
             }
 
-            table{
-                margin:2em;
-                width:80%;
+            table {
+                margin: 2em;
+                width: 80%;
             }
-            
+
 
             table,
             th,
@@ -32,6 +33,14 @@
 
             .content-align {
                 text-align: center;
+            }
+
+            paper-button.custom {
+                background-color: black;
+                -webkit-radius: 2dp;
+                font-size: 11px;
+                margin: 0.5em;
+                color: #fff;
             }
         </style>
 
@@ -56,13 +65,16 @@
                 <td class="content-align">64€</td>
             </tr>
         </table>
+        <div>
+            <paper-button raised noink class="custom" onclick="redirection(this)">Achetez vos places</paper-button>
+        </div>
     </template>
 
     <script>
         /**
-     * @customElement
-     * @polymer
-     */
+* @customElement
+* @polymer
+*/
         class DadaTable extends Polymer.Element {
             static get is() { return 'dada-table'; }
             static get properties() {
@@ -73,8 +85,15 @@
                     }
                 };
             }
+
+            redirection(el) {
+                el.addEventListener('transitionend', function(e) {
+                    location.href = 'src/dada-app/elements/dada-exposition.html';
+                });
+            }
         }
 
         window.customElements.define(DadaTable.is, DadaTable);
+
     </script>
 </dom-module>
