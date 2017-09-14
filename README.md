@@ -1,6 +1,6 @@
 # DADA Project
 
-Virtual visit of museums or temporary exhibitions with VR headset or with your PC screen 
+Virtual visit of museums or temporary exhibitions with VR headset or PC screen 
 
 ## To run the application locally
   
