@@ -1,0 +1,53 @@
+<link rel="import" href="../../../bower_components/l2t-paper-slider/l2t-paper-slider.html">
+
+<dom-module id="dada-slide">
+    <template>
+        <style>
+             :host {
+                display: flex;
+                width: 100%;
+            }
+
+            .custom-slider {
+                --paper-slide-height: 100%;
+                --paper-slide-width: 100%;
+                --paper-slide-dot-styles: black;
+            }
+
+            .custom-slide {
+                display: flex;
+                justify-content: center;
+                /* align horizontal */
+                align-items: center;
+                /* align vertical */
+            }
+        </style>
+
+        <l2t-paper-slider class="custom-slider" auto-progress slide-duration="4" sensitivity="slow" total-slides="3">
+            <paper-slide><img src="src/img/slide1.png" class="custom-slide" /></paper-slide>
+            <paper-slide><img src="src/img/slide2.png" class="custom-slide" /></paper-slide>
+            <paper-slide><img src="src/img/slide3.png" class="custom-slide" /></paper-slide>
+        </l2t-paper-slider>
+
+    </template>
+
+    <script>
+        /**
+     * @customElement
+     * @polymer
+     */
+        class DadaSlide extends Polymer.Element {
+            static get is() { return 'dada-slide'; }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'dada-slide'
+                    }
+                };
+            }
+        }
+
+        window.customElements.define(DadaSlide.is, DadaSlide);
+    </script>
+</dom-module>
