@@ -1,0 +1,69 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="dada-news">
+    <template>
+        <style>
+             :host {}
+
+            .flex-container {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-flow: nowrap;
+                justify-content: space-around;
+            }
+
+            .flex-item {
+                background: tomato;
+                width: 400px;
+                /* Or whatever */
+                height: 400px;
+                /* Or whatever */
+                margin: auto;
+                margin-top: 10px;
+
+                line-height: 150px;
+                color: white;
+                font-weight: bold;
+                font-size: 3em;
+                text-align: center;
+            }
+        </style>
+
+        <div class="flex-container">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+    </template>
+
+    <script>
+        /**
+* @customElement
+* @polymer
+*/
+        class DadaNews extends Polymer.Element {
+            static get is() { return 'dada-news'; }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'dada-news'
+                    }
+                };
+            };
+
+
+        }
+
+        window.customElements.define(DadaNews.is, DadaNews);
+    </script>
+
+</dom-module>

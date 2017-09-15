@@ -12,15 +12,14 @@
 
             .papertabs-style {
                 --paper-tabs-selection-bar-color: #DA30B7;
-                --paper-tabs-container: {
+                --paper-tabs-selection-bar:
+                {
                     width:100%;
-                } 
+                }
             }
 
             .papertab-style {
-                --paper-tabs-container: {
-                    width:33.3%;
-                } 
+                width:100%;
             }
 
            /* a retester 
@@ -33,9 +32,9 @@
             }*/
         </style>
         <paper-tabs class="papertabs-style" selected="{{selected}}" scrollable>
-            <paper-tab class="papertab-style" on-click="_activeChanged"><iron-icon icon="hardware:phonelink"></iron-icon>Choisir</paper-tab>
-            <paper-tab class="papertab-style" on-click="_activeChanged">Acheter</paper-tab>
-            <paper-tab class="papertab-style" on-click="_activeChanged"><iron-icon icon="icons:visibility"></iron-icon> Visiter</paper-tab>
+            <paper-tab on-click="_activeChanged"><iron-icon icon="icons:visibility"></iron-icon> Visiter</paper-tab>
+            <paper-tab on-click="_activeChanged">Acheter</paper-tab>
+            <paper-tab on-click="_activeChanged"><iron-icon icon="hardware:phonelink"></iron-icon>Choisir</paper-tab>
         </paper-tabs>
          
         <iron-collapse id="collapse">
