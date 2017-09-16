@@ -20,20 +20,45 @@
                 justify-content: space-around;
             }
 
-            .flex-item {
-                background: tomato;
-                width: 400px;
+            .flex-item:hover {
+
+                background: #fff;
+                width: 355px;
                 /* Or whatever */
-                height: 400px;
+                height: 375px;
                 /* Or whatever */
                 margin: auto;
                 margin-top: 10px;
 
                 line-height: 150px;
-                color: white;
+                color: black;
                 font-weight: bold;
                 font-size: 3em;
                 text-align: center;
+                -moz-box-shadow: 0px 3px 10px #D5D5D5;
+                -webkit-box-shadow: 0px 3px 10px #D5D5D5;
+                box-shadow: 0px 3px 10px #D5D5D5;
+            }
+
+            .flex-item {
+                background: #fff;
+                width: 350px;
+                /* Or whatever */
+                height: 370px;
+                /* Or whatever */
+                margin: auto;
+                margin-top: 10px;
+
+                line-height: 150px;
+                color: black;
+                font-weight: bold;
+                font-size: 3em;
+                text-align: center;
+                /*box-shadow: 1px 1.5px 2px grey;*/
+            }
+
+            .title-box {
+                background-color: rgba(0, 0, 255, 0.5);
             }
         </style>
 
@@ -42,6 +67,7 @@
             <div class="flex-item">2</div>
             <div class="flex-item">3</div>
         </div>
+        
     </template>
 
     <script>
