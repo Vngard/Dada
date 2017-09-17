@@ -3,7 +3,9 @@
 <dom-module id="dada-news">
     <template>
         <style>
-             :host {}
+             :host {
+                margin-top: 3em;
+            }
 
             .flex-container {
                 padding: 0;
@@ -19,14 +21,11 @@
                 -webkit-flex-flow: nowrap;
                 justify-content: space-around;
             }
+            /*.flex-item:hover {
 
-            .flex-item:hover {
-
-                background: #fff;
+                background: tomato;
                 width: 355px;
-                /* Or whatever */
-                height: 375px;
-                /* Or whatever */
+                height: auto;
                 margin: auto;
                 margin-top: 10px;
 
@@ -38,14 +37,12 @@
                 -moz-box-shadow: 0px 3px 10px #D5D5D5;
                 -webkit-box-shadow: 0px 3px 10px #D5D5D5;
                 box-shadow: 0px 3px 10px #D5D5D5;
-            }
+            }*/
 
             .flex-item {
                 background: #fff;
                 width: 350px;
-                /* Or whatever */
-                height: 370px;
-                /* Or whatever */
+                height: auto;
                 margin: auto;
                 margin-top: 10px;
 
@@ -60,14 +57,70 @@
             .title-box {
                 background-color: rgba(0, 0, 255, 0.5);
             }
+
+            .img-responsive {
+                display: block;
+                width: 100% \9;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .article-container {
+                margin: -10px 10px 0;
+                background-color: #fff;
+                position: relative;
+                z-index: 2;
+                text-align: center;
+            }
+
+            .flex-item:hover .article-container {
+                margin: -10px 10px 0;
+                background-color: #fff;
+                position: relative;
+                z-index: 2;
+                text-align: center;
+                -moz-box-shadow: 0px 3px 10px #D5D5D5;
+                -webkit-box-shadow: 0px 3px 10px #D5D5D5;
+                box-shadow: 0px 3px 10px #D5D5D5;
+            }
+
+            .title-container {
+                background-color: black;
+                margin-top: -10px 10px 0;
+                position: relative;
+                z-index: 2;
+                text-align: center;
+                color: white;
+                width: auto;
+                font-size: 4vw;
+            }
         </style>
 
         <div class="flex-container">
-            <div class="flex-item">1</div>
-            <div class="flex-item">2</div>
-            <div class="flex-item">3</div>
-        </div>
-        
+            <div class="flex-item">
+                <div class=img-responsive>
+                    <img src="src/img/MAGRITTE.jpg" class="img-responsive"></img>
+                    <div class="article-container">
+                        Magritte, La trahison des images
+                    </div>
+                </div>
+            </div>
+            <div class="flex-item">
+                <div class=img-responsive>
+                    <img src="src/img/PICASSO.jpg" class="img-responsive"></img>
+                    <div class="article-container">
+                        2
+                    </div>
+                </div>
+            </div>
+            <div class="flex-item">
+                <div class=img-responsive>
+                    <img src="src/img/IRVINGPENN.jpg" class="img-responsive"></img>
+                    <div class="article-container">
+                        3
+                    </div>
+                </div>
+
     </template>
 
     <script>
