@@ -1,4 +1,4 @@
-<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
 
 <dom-module id="dada-news">
     <template>
@@ -11,7 +11,7 @@
                 padding: 0;
                 margin: 0;
                 list-style: none;
-
+                margin-bottom: 2em;
                 display: -webkit-box;
                 display: -moz-box;
                 display: -ms-flexbox;
@@ -49,7 +49,6 @@
                 line-height: 150px;
                 color: black;
                 font-weight: bold;
-                font-size: 3em;
                 text-align: center;
                 /*box-shadow: 1px 1.5px 2px grey;*/
             }
@@ -71,6 +70,7 @@
                 position: relative;
                 z-index: 2;
                 text-align: center;
+                height: 10%;
             }
 
             .flex-item:hover .article-container {
@@ -94,6 +94,13 @@
                 width: auto;
                 font-size: 4vw;
             }
+
+            .title-news{
+                font-size: 30px;
+                text-align: justify;
+                font-weight: bold;
+            }
+
         </style>
 
         <div class="flex-container">
@@ -101,7 +108,7 @@
                 <div class=img-responsive>
                     <img src="src/img/MAGRITTE.jpg" class="img-responsive"></img>
                     <div class="article-container">
-                        Magritte, La trahison des images
+                        <span class="title-news">Magritte, La trahison des images</span>
                     </div>
                 </div>
             </div>
@@ -109,7 +116,7 @@
                 <div class=img-responsive>
                     <img src="src/img/PICASSO.jpg" class="img-responsive"></img>
                     <div class="article-container">
-                        2
+                        <span class="title-news">Picasso, primitif</span>
                     </div>
                 </div>
             </div>
@@ -117,7 +124,7 @@
                 <div class=img-responsive>
                     <img src="src/img/IRVINGPENN.jpg" class="img-responsive"></img>
                     <div class="article-container">
-                        3
+                        <span class="title-news">Irving Penn</span>
                     </div>
                 </div>
 
