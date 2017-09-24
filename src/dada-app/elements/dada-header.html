@@ -13,10 +13,10 @@
       }
 
       .title-style {
-        margin-left:0.5em;
+        margin-left:1.5em;
       }
 
-      .title-style, .gradient:hover {
+      .gradient:hover {
         background: linear-gradient( to right, #DA30B7,#FF974F);
         -webkit-background-clip: text;
         color: transparent;
@@ -29,21 +29,29 @@
         padding: 0.5em;
       }
 
+      .title-img{
+        width: 150px;
+      }
+
       .container{
         display: flex;
       }
 
+      .header-img{
+        width: 30px;
+      }
+
     </style>
-    <h1 class="title-style "><b>DADA</b></h1>
+    <div class="title-style"><img class="title-img" src="src/img/logo.png"></div>
     <div class="container">
       <div class="itemMenu gradient"><b>Billeterie</b></div>
       <div class="itemMenu gradient"><b>S'abonner</b></div>
       <div class="itemMenu gradient"><b>Se connecter</b></div>
       <div class="itemMenu gradient"><b>S'inscrire</b></div>
       <div class="itemMenu">|</div>
-      <div class="itemMenu"><iron-icon icon="icons:search"></iron-icon></div>
-      <div class="itemMenu"><iron-icon icon="icons:face"></iron-icon></div>
-      <div class="itemMenu"><iron-icon icon="icons:shopping-basket"></iron-icon></div>
+      <div class="itemMenu"><img class="header-img" src="src/img/search.png"></div>
+      <div class="itemMenu"><img class="header-img" src="src/img/account.png"></div>
+      <div class="itemMenu"><img class="header-img" src="src/img/market.png"></div>
     </div>
   </template>
 

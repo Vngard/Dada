@@ -11,15 +11,16 @@
             }
 
             .papertabs-style {
-                --paper-tabs-selection-bar-color: #DA30B7;
+                --paper-tabs-selection-bar-color: black;
                 --paper-tabs-selection-bar:
                 {
                     width:100%;
+                    height: 100px;
                 }
             }
 
             .papertab-style {
-                width:100%;
+                width:28vw;
             }
 
            /* a retester 
@@ -30,18 +31,25 @@
                 width:100%;
                 justify-content: center;
             }*/
+
+            .custom-slide{
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
         </style>
         <paper-tabs class="papertabs-style" selected="{{selected}}" scrollable>
-            <paper-tab on-click="_activeChanged"><iron-icon icon="icons:visibility"></iron-icon> Visiter</paper-tab>
+            <paper-tab on-click="_activeChanged"><iron-icon icon="icons:visibility"></iron-icon>Choisir </paper-tab>
             <paper-tab on-click="_activeChanged">Acheter</paper-tab>
-            <paper-tab on-click="_activeChanged"><iron-icon icon="hardware:phonelink"></iron-icon>Choisir</paper-tab>
+            <paper-tab on-click="_activeChanged"><iron-icon icon="hardware:phonelink"></iron-icon>Visiter</paper-tab>
         </paper-tabs>
          
         <iron-collapse id="collapse">
             <iron-pages selected="{{selected}}">
-                <div>One<iron-icon icon="icons:close" on-click="closeCollapse"></div>
+                <div><img src="src/img/choix.png" class="custom-slide"></img><iron-icon icon="icons:close" on-click="closeCollapse"></div>
                 <div><dada-table></dada-table><iron-icon icon="icons:close" on-click="closeCollapse"></div>
-                <div>Three<iron-icon icon="icons:close" on-click="closeCollapse"></div>
+                <div><img src="src/img/visiter.png" class="custom-slide"></img><iron-icon icon="icons:close" on-click="closeCollapse"></div>
             </iron-pages>
         </iron-collapse>
       

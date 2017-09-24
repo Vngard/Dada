@@ -5,31 +5,39 @@
         <style>
              :host {
                 width: 100%;
-                background-image: url(img/FOND.png);
+                margin-top: 2em;
             }
 
             .custom-slider {
+                
                 --paper-slide-height: 100%;
                 --paper-slide-width: 100%;
                 --paper-slide-dot: black;
-                --paper-slide-dot-selected:#fff;
+                --paper-slide-dot-selected: #fff;
             }
 
             .custom-slide {
                 display: flex;
-                justify-content: center;
+                /*justify-content: center;
                 /* align horizontal */
-                align-items: center;
+                /*align-items: center;
                 /* align vertical */
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .slide-conainer{
+                width: 100%;
+                margin-top: 0.1em;
             }
         </style>
-
+    <div class="slide-conainer">
         <l2t-paper-slider class="custom-slider" auto-progress slide-duration="4" sensitivity="slow" total-slides="3">
             <paper-slide><img src="src/img/00-HOME-DADA.png" class="custom-slide" /></paper-slide>
             <paper-slide><img src="src/img/00-HOME-DADA-2.png" class="custom-slide" /></paper-slide>
             <paper-slide><img src="src/img/00-HOME-DADA-3.png" class="custom-slide" /></paper-slide>
         </l2t-paper-slider>
-
+    </div>
     </template>
 
     <script>
