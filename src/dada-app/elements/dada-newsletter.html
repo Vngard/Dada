@@ -1,0 +1,103 @@
+
+<dom-module id="dada-footer">
+    <template>
+      <style>
+         :host {
+          position: relative;
+          bottom: 0;
+          width: 100%;
+        }
+  
+        .footer {
+          display: flex;
+          background-color: black;
+          color: white;
+        }
+  
+        .column {
+          flex: 1;
+          margin: 3em;
+        }
+  
+        .column-left {
+          order: 1;
+        }
+  
+        .column-center {
+          order: 2;
+        }
+  
+        .column-right {
+          margin-left: 3em;
+          order: 3;
+        }
+  
+        .column-social {
+          order: 4;
+        }
+  
+        .img {
+          width: 200px;
+        }
+  
+        .column-content {
+          margin:2em;
+        }
+        
+      </style>
+  
+      <div class="footer">
+        <div class="column colum-left">
+          <div class="column-content">
+            <p>Audiodescription</p>
+            <p>Centre d'aide </p>
+            <p>Ralation</p>
+            <p>Investisseurs </p>
+            <p>Recrutement </p>
+            <p>Conditions d'utilisation</p>
+          </div>
+        </div>
+  
+        <div class="column colum-center">
+          <div class="column-content">
+           <p>S'abonner</p>
+           <p>Se connecter</p>
+           <p>Tarifs</p>
+           <p> A propos de DADA</p>
+          </div>
+        </div>
+  
+        <div class="column colum-right">
+          <div class="column-content">
+            <p>Presse</p>
+            <p>Confidentialité</p>
+          </div>
+        </div>
+  
+        <div class="column colum-social ">
+          <img class="img" src="src/img/reseauxsociaux.png" />
+        </div>
+      </div>
+    </template>
+  
+    <script>
+      /**
+       * @customElement
+       * @polymer
+       */
+      class DadaFooter extends Polymer.Element {
+        static get is() { return 'dada-footer'; }
+        static get properties() {
+          return {
+            prop1: {
+              type: String,
+              value: 'dada-footer'
+            }
+          };
+        }
+  
+      }
+  
+      window.customElements.define(DadaFooter.is, DadaFooter);
+    </script>
+  </dom-module>

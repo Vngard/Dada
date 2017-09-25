@@ -15,47 +15,65 @@
             }
 
             .papertab-style {
-                --paper-tab:{
-                    width:28vw;
+                --paper-tab: {
+                    width: 28vw;
                     height: auto;
                 }
             }
 
-           /* a retester 
-            .container{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                width:100%;
-                justify-content: center;
-            }*/
-
-            .custom-slide{
+            .custom-slide {
                 display: flex;
                 margin-left: auto;
                 margin-right: auto;
             }
 
+            .close {
+                position: relative;
+                float: right;
+                margin-right: 2em;
+            }
+            
         </style>
         <paper-tabs class="papertabs-style" selected="{{selected}}" scrollable>
-            <paper-tab  class="papertab-style" on-click="_activeChanged">
+            <paper-tab class="papertab-style" on-click="_activeChanged">
                 <div>
-                    <img src="src/img/device.png" class="custom-slide"/>
+                    <img src="src/img/device.png" class="custom-slide" />
                     <p>Choisir</p>
                 </div>
             </paper-tab>
-            <paper-tab  class="papertab-style" on-click="_activeChanged">Acheter</paper-tab>
-            <paper-tab  class="papertab-style" on-click="_activeChanged">Visiter</paper-tab>
+            <paper-tab class="papertab-style" on-click="_activeChanged">Acheter</paper-tab>
+            <paper-tab class="papertab-style" on-click="_activeChanged">Visiter</paper-tab>
         </paper-tabs>
-         
+
         <iron-collapse id="collapse">
             <iron-pages selected="{{selected}}">
-                <div><img src="src/img/choix.png" class="custom-slide"></img><iron-icon icon="icons:close" on-click="closeCollapse"></div>
-                <div><dada-table></dada-table><iron-icon icon="icons:close" on-click="closeCollapse"></div>
-                <div><img src="src/img/visiter.png" class="custom-slide"></img><iron-icon icon="icons:close" on-click="closeCollapse"></div>
+                <div>
+                    <div class="close">
+                        <iron-icon icon="icons:close" on-click="closeCollapse"></iron-icon>
+                    </div>
+                    <div>
+                        <img src="src/img/choix.png" class="custom-slide"></img>
+                    </div>
+                </div>
+                <div>
+                    <div class="close">
+                        <iron-icon icon="icons:close" on-click="closeCollapse"></iron-icon>
+                    </div>
+                    <div>
+                        <dada-table></dada-table>
+                    </div>
+                </div>
+                <div>
+                    <div class="close">
+                        <iron-icon icon="icons:close" on-click="closeCollapse"></iron-icon>
+                    </div>
+                    <div>
+                        <img src="src/img/visiter.png" class="custom-slide"></img>
+                    </div>
+                </div>
             </iron-pages>
         </iron-collapse>
-      
+
 
     </template>
 
@@ -81,7 +99,7 @@
             }
             _activeChanged() {
                 console.log("collapse state : ", this.$.collapse.opened, this.$.collapse)
-                if(!this.$.collapse.opened){
+                if (!this.$.collapse.opened) {
                     this.$.collapse.toggle();
                 }
             }
