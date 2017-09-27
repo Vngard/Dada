@@ -13,14 +13,7 @@
             .papertabs-style {
                 --paper-tabs-selection-bar-color: black;
             }
-
-            .papertab-style {
-                --paper-tab: {
-                    width: 28vw;
-                    height: auto;
-                }
-            }
-
+            
             .custom-slide {
                 display: flex;
                 margin-left: auto;
@@ -34,7 +27,7 @@
             }
             
         </style>
-        <paper-tabs class="papertabs-style" selected="{{selected}}" scrollable>
+        <paper-tabs class="papertabs-style" selected="{{selected}}">
             <paper-tab class="papertab-style" on-click="_activeChanged">
                 <div>
                     <img src="src/img/device.png" class="custom-slide" />
