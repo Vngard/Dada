@@ -12,9 +12,24 @@
 
             .papertabs-style {
                 --paper-tabs-selection-bar-color: black;
+                height: 15em;
             }
-            
+
+            .papertab-style:focus {
+                -moz-box-shadow: 0px 3px 10px #D5D5D5;
+                -webkit-box-shadow: 0px 3px 10px #D5D5D5;
+                box-shadow: 0px 3px 10px #D5D5D5;
+            }
+
             .custom-slide {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                height: 30%;
+                width: 30%;
+            }
+
+            .slide-content {
                 display: flex;
                 margin-left: auto;
                 margin-right: auto;
@@ -25,17 +40,51 @@
                 float: right;
                 margin-right: 2em;
             }
+
+            .title-action {
+                margin-top:1em;
+                margin-left: 3em;
+            }
+
+            .container {
+                text-align: center;
+            }
+
+            h1{
+                margin:2px;
+                font-weight: bold;
+            }
+
+            p{
+                margin:2px;
+            }
             
         </style>
         <paper-tabs class="papertabs-style" selected="{{selected}}">
-            <paper-tab class="papertab-style" on-click="_activeChanged">
-                <div>
+            <paper-tab on-click="_activeChanged" class="papertabs-style">
+                <div class="container">
                     <img src="src/img/device.png" class="custom-slide" />
-                    <p>Choisir</p>
+                    <span class="title-action"><h1>Choisir</h1></span>
+                    <p>L'exposition parmi celles proposées</p>
+                    <p>par nos musées partenaires.</p>
                 </div>
             </paper-tab>
-            <paper-tab class="papertab-style" on-click="_activeChanged">Acheter</paper-tab>
-            <paper-tab class="papertab-style" on-click="_activeChanged">Visiter</paper-tab>
+            <paper-tab on-click="_activeChanged" class="papertabs-style">
+                <div class="container">
+                    <img src="src/img/ticket.png" class="custom-slide" />
+                    <span class="title-action"><h1>Acheter</h1></span>
+                    <p>A l'unité, en groupe, ou abonnement mensuel,</p>
+                    <p>pour profiter des réductions.</p>
+                </div>
+            </paper-tab>
+            <paper-tab on-click="_activeChanged" class="papertabs-style">
+                <div class="container">
+                    <img src="src/img/eyes.png" class="custom-slide" />
+                    <span class="title-action"><h1>Visiter</h1></span>
+                    <p>Vous pouvez mettre en pause</p>
+                    <p>et reprendre à tout moment.</p>
+                </div>
+            </paper-tab>
         </paper-tabs>
 
         <iron-collapse id="collapse">
@@ -45,7 +94,7 @@
                         <iron-icon icon="icons:close" on-click="closeCollapse"></iron-icon>
                     </div>
                     <div>
-                        <img src="src/img/choix.png" class="custom-slide"></img>
+                        <img src="src/img/choix.png" class="slide-content"></img>
                     </div>
                 </div>
                 <div>
@@ -61,7 +110,7 @@
                         <iron-icon icon="icons:close" on-click="closeCollapse"></iron-icon>
                     </div>
                     <div>
-                        <img src="src/img/visiter.png" class="custom-slide"></img>
+                        <img src="src/img/visiter.png" class="slide-content"></img>
                     </div>
                 </div>
             </iron-pages>
