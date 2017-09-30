@@ -22,23 +22,6 @@
                 -webkit-flex-flow: nowrap;
                 justify-content: space-around;
             }
-            /*.flex-item:hover {
-
-                background: tomato;
-                width: 355px;
-                height: auto;
-                margin: auto;
-                margin-top: 10px;
-
-                line-height: 150px;
-                color: black;
-                font-weight: bold;
-                font-size: 3em;
-                text-align: center;
-                -moz-box-shadow: 0px 3px 10px #D5D5D5;
-                -webkit-box-shadow: 0px 3px 10px #D5D5D5;
-                box-shadow: 0px 3px 10px #D5D5D5;
-            }*/
 
             .flex-item {
                 background: #fff;
@@ -65,7 +48,7 @@
                 height: auto;
             }
 
-            .img-responsive:hover{
+            .img-responsive:hover {
                 display: block;
                 width: 100%;
                 max-width: 100%;
@@ -104,23 +87,56 @@
                 font-size: 4vw;
             }
 
-            .p{
+            .p {
                 font-size: 30px;
-                margin:2px;
+                margin: 2px;
                 text-align: justify;
                 font-weight: bold;
             }
 
+            h1 {
+                text-align: center;
+                position: relative;
+                line-height: 1.2em;
+            }
+
+            h1:before {
+                position: absolute;
+                left: 20.5em;
+                top: 1.5em;
+                height: 0;
+                width: 3.5em;
+                content: '';
+                border-top: 1px solid black;
+            }
+
+            .button-container {
+                text-align: center;
+            }
+
+            paper-button.custom {
+                width: 85%;
+                height: 3.8em;
+                background-color: black;
+                color: white;
+            }
+
+            .button-title{
+                margin-left: 0.5em;
+                color:grey;
+            }
 
         </style>
-
+        <div>
+            <h1>En ce moment...</h1>
+        </div>
         <div class="flex-container">
             <div class="flex-item">
                 <div class=img-responsive>
                     <img src="src/img/MAGRITTE.jpg" class="img-responsive"></img>
                     <div class="article-container">
-                            <span class="title-news">Magritte, La trahison des images<span class="title-news">
-                            <span></span>
+                        <span class="title-news">Magritte, La trahison<span class="title-news">
+                        <span class="title-news">des images</span>
                     </div>
                 </div>
             </div>
@@ -136,10 +152,15 @@
                 <div class=img-responsive>
                     <img src="src/img/IRVINGPENN.jpg" class="img-responsive"></img>
                     <div class="article-container">
-                            <span class="title-news">Irving Penn<span class="title-news">
+                        <span class="title-news">Irving Penn<span class="title-news">
                     </div>
                 </div>
 
+            </div>
+        </div>
+            <div class="button-container">
+                <paper-button raised noink class="custom" on-click="handleClick">Découvrir les autres expositions du moment <span class="button-title">(12)</span></paper-button>
+            </div>
     </template>
 
     <script>

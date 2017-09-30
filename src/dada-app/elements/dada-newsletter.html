@@ -1,103 +1,82 @@
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
 
-<dom-module id="dada-footer">
-    <template>
-      <style>
-         :host {
-          position: relative;
-          bottom: 0;
-          width: 100%;
-        }
-  
-        .footer {
-          display: flex;
-          background-color: black;
-          color: white;
-        }
-  
-        .column {
-          flex: 1;
-          margin: 3em;
-        }
-  
-        .column-left {
-          order: 1;
-        }
-  
-        .column-center {
-          order: 2;
-        }
-  
-        .column-right {
-          margin-left: 3em;
-          order: 3;
-        }
-  
-        .column-social {
-          order: 4;
-        }
-  
-        .img {
-          width: 200px;
-        }
-  
-        .column-content {
-          margin:2em;
-        }
-        
-      </style>
-  
-      <div class="footer">
-        <div class="column colum-left">
-          <div class="column-content">
-            <p>Audiodescription</p>
-            <p>Centre d'aide </p>
-            <p>Ralation</p>
-            <p>Investisseurs </p>
-            <p>Recrutement </p>
-            <p>Conditions d'utilisation</p>
-          </div>
-        </div>
-  
-        <div class="column colum-center">
-          <div class="column-content">
-           <p>S'abonner</p>
-           <p>Se connecter</p>
-           <p>Tarifs</p>
-           <p> A propos de DADA</p>
-          </div>
-        </div>
-  
-        <div class="column colum-right">
-          <div class="column-content">
-            <p>Presse</p>
-            <p>Confidentialité</p>
-          </div>
-        </div>
-  
-        <div class="column colum-social ">
-          <img class="img" src="src/img/reseauxsociaux.png" />
-        </div>
+<dom-module id="dada-newsletter">
+  <template>
+    <style>
+       :host {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: #FFEFEF;
+      }
+
+      .container{
+        margin-bottom: 20em;
+      }
+
+      h1 {
+        text-align: center;
+        position: relative;
+        line-height: 1.2em;
+      }
+
+      h1:before {
+        position: absolute;
+        left: 20.5em;
+        top: 1.5em;
+        height: 0;
+        width: 3.5em;
+        content: '';
+        border-top: 1px solid black;
+      }
+
+      paper-button.custom {
+        width: 40em;
+        background-color: black;
+        color: white;
+      }
+
+      .button-container{
+        text-align: center;
+      }
+
+      .empty-container{
+        margin-bottom: 4em;
+      }
+      
+    </style>
+
+    <div class="container">
+      <div class="empty-container"></div>
+      <h1>Restez Informés</h1>
+
+      <div class="button-container">
+        <paper-button raised noink class="custom" on-click="handleClick">M'inscrire à la newsletter</paper-button>
       </div>
-    </template>
-  
-    <script>
-      /**
+
+    </div>
+
+  </template>
+
+  <script>
+    /**
        * @customElement
        * @polymer
        */
-      class DadaFooter extends Polymer.Element {
-        static get is() { return 'dada-footer'; }
-        static get properties() {
-          return {
-            prop1: {
-              type: String,
-              value: 'dada-footer'
-            }
-          };
-        }
-  
+    class DadaNewsletter extends Polymer.Element {
+      static get is() { return 'dada-newsletter'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'dada-newsletter'
+          }
+        };
       }
-  
-      window.customElements.define(DadaFooter.is, DadaFooter);
-    </script>
-  </dom-module>
+
+    }
+
+    window.customElements.define(DadaNewsletter.is, DadaNewsletter);
+  </script>
+</dom-module>
