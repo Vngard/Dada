@@ -4,16 +4,79 @@
     <template>
         <style>
              :host {
-                margin: 0;
-                padding: 0;
-                background: url(../../img/Magritte-top.jpg) no-repeat center fixed;
-                -webkit-background-size: cover;
-                /* pour anciens Chrome et Safari */
-                background-size: cover;
-                /* version standardisée */
+                
             }
-        </style>
 
+            .flex-container {
+                padding: 0;
+                margin: 0;
+                margin-top: 2em;
+                list-style: none;
+                margin-bottom: 2em;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-flow: nowrap;
+                justify-content: space-around;
+            }
+
+            .flex-item {
+                background: #fff;
+                width: 100%;
+                height: auto;
+                margin: 0 25% 0 25%;
+
+                color: black;
+                font-weight: bold;
+                text-align: center;
+                /*box-shadow: 1px 1.5px 2px grey;*/
+            }
+
+            .article-container {
+                margin: -15px 10px 0;
+                background-color: #fff;
+                position: relative;
+                z-index: 2;
+                text-align: center;
+                height: 200px;
+                display: block;
+            }
+
+            .img-responsive {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                height: 550px;
+            }
+
+            .text-container{
+                display: flex;
+                justify-content: center;
+            }
+
+        </style>
+                <div class="flex-container">
+                        <div class="flex-item">
+                            <div class=img-responsive>
+                                <img src="src/img/MAGRITTE-backgroung.jpg" class="img-responsive"></img>
+                                    <div class="article-container">
+                                        <div class="encart"><span class="title-news">Peinture</span></div>
+                                        <span class="title-news">Magritte, La trahison</span>
+                                        <br/>
+                                        <span class="title-news">des images</span>
+                                        <br/>
+                                        <br/>
+                                        <img src="src/img/Fichier6.png" class="calendar-style" /><span class="date-style">21 Sept 2017 - 23 Jan 2018</span>
+                                        <br/>
+                                        <br/>
+                                        <img src="src/img/Fichier5.png" class="location-style" /><span class="date-style gradiant">Centre Pompidou</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
     </template>
 
     <script>
