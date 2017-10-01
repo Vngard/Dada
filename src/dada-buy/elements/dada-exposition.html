@@ -89,8 +89,33 @@
             }
 
             .text-container{
+                display:block;
                 margin-top: 2em;
+                -moz-box-shadow: 0px 3px 10px #D5D5D5;
+                -webkit-box-shadow: 0px 3px 10px #D5D5D5;
+                box-shadow: 0px 3px 10px #D5D5D5;
             }
+
+            .title{
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            .title-style:before {
+                position: absolute;
+                left: 20.5em;
+                top: 1.5em;
+                height: 0;
+                width: 3.5em;
+                content: '';
+                border-top: 1px solid black;
+            }
+
+            video {
+                margin-top: 2em;
+                margin-bottom: 5em;
+            }
+
         </style>
 
         <img src="src/img/MAGRITTE-background.jpg" class="img-responsive"></img>
@@ -105,10 +130,21 @@
 
                         <div class="text-container">
                             <img src="src/img/TEXTMAGRITTE.png"/>
-                        </div>
-                </div>
 
+                            <br/>
+                            <br/>
+                            <div class="video-style">
+                                <span class="title">Visionnez la bande annonce de l'exposition</span>
+                            </div>
+                            <video width="600" controls>
+                                <source src="src/img/POC-DADA.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        
+                </div>
             </div>
+            
             <!--</div>-->
         </div>
     </template>
