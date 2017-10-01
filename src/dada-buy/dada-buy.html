@@ -1,0 +1,38 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="elements/dada-exposition.html">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+<dom-module id="dada-buy">
+  <template>
+    <style>
+      :host {
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+      }
+    </style>
+    <dada-header></dada-header>
+    <dada-slide></dada-slide>
+    <dada-action></dada-action>
+    <dada-news></dada-news>
+    <dada-newsletter></dada-newsletter>
+    <dada-footer></dada-footer>
+  </template>
+  
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class DadaBuy extends Polymer.Element {
+      static get is() { return 'dada-buy'; }
+      static get properties() {
+        return {
+      
+        };
+      }
+    }
+
+    window.customElements.define(DadaBuy.is, DadaBuy);
+  </script>
+</dom-module>

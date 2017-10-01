@@ -47,22 +47,14 @@
                 height: auto;
             }
 
-            .img-responsive:hover {
-                display: block;
-                width: 100%;
-                max-width: 100%;
-                height: auto;
-                background-image: url('src/img/MAGRITTE-OVER.jpg');
-            }
-
             .article-container {
                 margin: -15px 10px 0;
                 background-color: #fff;
                 position: relative;
                 z-index: 2;
                 text-align: center;
-                height: 250px;
-
+                height: 200px;
+                display: block;
             }
 
             .flex-item:hover .article-container {
@@ -85,13 +77,6 @@
                 color: white;
                 width: auto;
                 font-size: 4vw;
-            }
-
-            .p {
-                font-size: 30px;
-                margin: 2px;
-                text-align: justify;
-                font-weight: bold;
             }
 
             h1 {
@@ -121,25 +106,50 @@
                 color: white;
             }
 
-            .button-title{
+            .button-title {
                 margin-left: 0.5em;
-                color:grey;
+                color: grey;
             }
 
-            .title-news{
+            .title-news {
                 font-size: 25px;
+                text-align: justify;
             }
 
-            .encart span{
+            .encart span {
                 position: relative;
-                top:-15px;
+                top: -15px;
                 background-color: black;
-                color:white;
+                color: white;
                 align-self: center;
                 font-size: 15px;
-                padding: 3px;
+                padding: 12px;
             }
 
+            .date-style {
+                margin-top: 1em;
+                margin-bottom: 1em;
+                margin-left: 0.5em;
+            }
+
+            .calendar-style {
+                width: 1.5em;
+            }
+
+            .location-style {
+                width: 1em;
+            }
+
+            .flex-item:hover .gradiant {
+                background: linear-gradient( to right, #00B3ED, #00F800);
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+
+            a { 
+                color: inherit;
+                text-decoration: none;
+            }
         </style>
         <div>
             <h1>En ce moment...</h1>
@@ -148,17 +158,34 @@
             <div class="flex-item">
                 <div class=img-responsive>
                     <img src="src/img/MAGRITTE.jpg" class="img-responsive"></img>
-                    <div class="article-container">
-                        <div class="encart"><span class="title-news">Magritte</span></div>
-                        <span class="title-news">Magritte, La trahison des images</span>
-                    </div>
+                    <a href src="../../../exposition.html">
+                        <div class="article-container">
+                            <div class="encart"><span class="title-news">Peinture</span></div>
+                            <span class="title-news">Magritte, La trahison</span>
+                            <br/>
+                            <span class="title-news">des images</span>
+                            <br/>
+                            <br/>
+                            <img src="src/img/Fichier6.png" class="calendar-style" /><span class="date-style">21 Sept 2017 - 23 Jan 2018</span>
+                            <br/>
+                            <br/>
+                            <img src="src/img/Fichier5.png" class="location-style" /><span class="date-style gradiant">Centre Pompidou</span>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="flex-item">
                 <div class=img-responsive>
                     <img src="src/img/PICASSO.jpg" class="img-responsive"></img>
                     <div class="article-container">
+                        <div class="encart"><span class="title-news">Peinture & Sculpture</span></div>
                         <span class="title-news">Picasso, primitif</span>
+                        <br/>
+                        <br/>
+                        <img src="src/img/Fichier6.png" class="calendar-style" /><span class="date-style">28 Mars 2018 - 23 Juil 2018</span>
+                        <br/>
+                        <br/>
+                        <img src="src/img/Fichier5.png" class="location-style" /><span class="date-style gradiant">Musée du Quai Branly</span>
                     </div>
                 </div>
             </div>
@@ -166,15 +193,22 @@
                 <div class=img-responsive>
                     <img src="src/img/IRVINGPENN.jpg" class="img-responsive"></img>
                     <div class="article-container">
-                        <span class="title-news">Irving Penn<span class="title-news">
+                        <div class="encart"><span class="title-news">Photogrpahie</span></div>
+                        <span class="title-news">Irving Penn</span>
+                        <br/>
+                        <br/>
+                        <img src="src/img/Fichier6.png" class="calendar-style" /><span class="date-style">21 Sept - 29 Jan 2019</span>
+                        <br/>
+                        <br/>
+                        <img src="src/img/Fichier5.png" class="location-style" /><span class="date-style gradiant">Galeries Nationales du Grand Palais</span>
                     </div>
                 </div>
 
             </div>
         </div>
-            <div class="button-container">
-                <paper-button raised noink class="custom" on-click="handleClick">Découvrir les autres expositions du moment <span class="button-title">(12)</span></paper-button>
-            </div>
+        <div class="button-container">
+            <paper-button raised noink class="custom" on-click="handleClick">Découvrir les autres expositions du moment <span class="button-title">(12)</span></paper-button>
+        </div>
     </template>
 
     <script>
