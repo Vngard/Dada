@@ -1,5 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../../dada-app/elements/dada-news.html">
+<link rel="import" href="../../dada-app/elements/dada-footer.html">
 
 <dom-module id="dada-exposition">
     <template>
@@ -145,7 +145,7 @@
             .right-content {
                 float: right;
                 height: auto;
-                margin: 7em 0em 1em 0;
+                margin: 3em 0em 1em 0;
                 width: 55%;
             }
 
@@ -154,14 +154,36 @@
             }
 
             .umbrella-style {
-                width: 275px;
-                height: 350px;
+                width: 100%;
+                height: 100%;
+                max-height: 100%;
+                max-width: 100%;
             }
 
-            p {
-                margin-left: 4em;
-                text-align: left;
-                font-size: 13px;
+            paper-button.custom {
+                width: 10%;
+                height: 2em;
+                background-color: black;
+                color: white;
+            }
+
+            .price{
+                border: 1px solid black;
+                width: 100%;
+                height: 20em;
+                height: auto;
+            }
+
+            .button-price {
+                left:0;
+                width: 50%;
+                max-height: 100%;
+                max-width: 100%;
+            }
+
+            a { 
+                color: inherit;
+                text-decoration: none;
             }
         </style>
 
@@ -198,31 +220,18 @@
                                     <img src="src/img/parapluie.png" class="umbrella-style">
                                 </div>
                                 <div class="right-content">
-                                    <span class="title">Visite digitale immersive</span>
-                                    <span class="title">Magritte, la trahison des images</span>
-                                    <br/>
-                                    <span class="date-style margin-title"><img src="src/img/Fichier6.png" class="calendar-style" />21 Sept 2017 - 23 Jan 2018</span>
-                                    <span class="date-style margin-title"><img src="src/img/Fichier1.png" class="calendar-style" />Durée moyenne : 1h30</span>
-                                    <br />
-                                    <p>
-                                        Pour cette exposition,plus d'une centaine d'oeuvres du
-                                        peintre surréaliste sont réunies dnas la salle du Centre
-                                        Pompidou, l'occasion d'une rétrospective tournée vers la trahison des images. Retrouvez les avec un contenu immersif et éductif
-                                        dans cette e-visite.
-                                        trahison des images. Retrouvez les avec un contenu immersif et éductif dans cette e-visite.
-                                        immersif et éductif dans cette e-visite.
-                                    </p>
+                                    <img src="src/img/p1.png" class="umbrella-style"/>
+                                    
+                                   <a href="paiment.html"><img src="src/img/btn1.png" class="button-price"/></a> 
+                                    
+                                    <img src="src/img/p2.png" class=""/>
                                 </div>
                             </div>
                         </div>
 
-                        <!--<div class="video-style">
-                                <span class="title">En ce moment sur DADA</span>
-                                <dada-news></dada-news>
-                            </div>-->
-
                     </div>
-
+                    
+                
                 </div>
             </div>
 
