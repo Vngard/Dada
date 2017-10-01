@@ -29,17 +29,16 @@
         height: 0;
         width: 3.5em;
         content: '';
-        border-top: 1px solid black;
       }
 
       paper-button.custom-button {
-        width: 40em;
+        width: 100%;
         background-color: black;
         color: white;
       }
 
       .custom-input {
-        width: 40em;
+        width: 100%;
         color:grey;
         font-family: Helvetica, Arial, sans-serif;
         font-weight:500;
@@ -51,25 +50,33 @@
       }
 
       .button-container{
-        align-self: center;
-        margin-bottom: 2em;
+        width: 40em;
+        margin-bottom: 2em !important;
       }
 
       .empty-container{
-        margin-bottom: 4em;
+        margin-bottom: 2em !important;
+        width: 10em;
+        border-top: 1px solid black;
+      }
+
+      .center {
+        margin: 0 auto;
       }
       
     </style>
 
     <div class="container">
-      <div class="empty-container"></div>
+      
       <h1>Restez Informés</h1>
-      <div class="button-container">
-          <input type="text" label="Mon mail" class="custom-input"></input>
-      </div>
-      <div class="button-container">
-        <paper-button raised noink class="custom-button" on-click="handleClick">M'inscrire à la newsletter</paper-button>
-      </div>
+      <div class="empty-container center"></div>
+          <div class="button-container center">
+              <input type="text" label="Mon mail" class="custom-input"></input>
+          </div>
+          <div class="center button-container">
+            <paper-button raised noink class="custom-button" on-click="handleClick">M'inscrire à la newsletter</paper-button>
+          </div>
+      
 
     </div>
 
