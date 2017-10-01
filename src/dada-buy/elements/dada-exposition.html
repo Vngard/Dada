@@ -3,11 +3,15 @@
 <dom-module id="dada-exposition">
     <template>
         <style>
-             :host {}
+             :host {
+                 width: 100%;
+                height: auto;
+             }
 
             .flex-container {
                 padding: 0;
                 margin: 0;
+                height: auto;
                 margin-top: -2em;
                 list-style: none;
                 margin-bottom: 2em;
@@ -20,8 +24,7 @@
                 -webkit-flex-flow: nowrap;
                 justify-content: space-around;
             }
-
-            .flex-item {
+            /*.flex-item {
                 background: #fff;
                 width: 100%;
                 height: auto;
@@ -31,15 +34,15 @@
                 font-weight: bold;
                 text-align: center;
                 /*box-shadow: 1px 1.5px 2px grey;*/
-            }
+            /*}*/
 
             .article-container {
-                margin: -115px 10px 0;
+                margin: -98px 10% 0 10%;
                 background-color: #fff;
                 position: relative;
                 z-index: 2;
                 text-align: center;
-                height: 200px;
+                height: auto;
                 display: block;
             }
 
@@ -69,18 +72,45 @@
                 font-size: 15px;
                 padding: 12px;
             }
+
+            .location-style {
+                background: linear-gradient( to right, #00B3ED, #00F800);
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+
+            .margin-title {
+                margin: 2em 2em 0 2em;
+            }
+
+            .calendar-style {
+                width: 1.5em;
+                margin-right: 1em;
+            }
+
+            .text-container{
+                margin-top: 2em;
+            }
         </style>
 
         <img src="src/img/MAGRITTE-background.jpg" class="img-responsive"></img>
         <div class="flex-container">
-            <div class="flex-item">
-                <div class=img-responsive>
-                    <div class="article-container">
+            <!--<div class="flex-item">-->
+            <div class=img-responsive>
+                <div class="article-container">
                         <div class="encart"><span class="title-news">Peinture</span></div>
-                    </div>
-                </div>
-            </div>
+                        <span class="date-style margin-title"><img src="src/img/Fichier6.png" class="calendar-style" />21 Sept 2017 - 23 Jan 2018</span>
+                        <span class="margin-title"><img src="src/img/Fichier1.png" class="calendar-style" />Durée moyenne : 1h30</span>
+                        <span class="location-style margin-title"><img src="src/img/Fichier5.png" class="calendar-style" />Centre Pompidou</span>
 
+                        <div class="text-container">
+                            <img src="src/img/TEXTMAGRITTE.png"/>
+                        </div>
+                </div>
+
+            </div>
+            <!--</div>-->
+        </div>
     </template>
 
     <script>
