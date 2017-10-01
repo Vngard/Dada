@@ -13,12 +13,17 @@
             .papertabs-style {
                 --paper-tabs-selection-bar-color: black;
                 height: 15em;
+                border-top: 1px solid #D4D4D4;
             }
 
-            .papertab-style:focus {
-                -moz-box-shadow: 0px 3px 10px #D5D5D5;
-                -webkit-box-shadow: 0px 3px 10px #D5D5D5;
-                box-shadow: 0px 3px 10px #D5D5D5;
+            .papertab-style:hover {
+                -moz-box-shadow: 0px 0px 10px #949494;
+                -webkit-box-shadow: 0px 0px 10px #949494;
+                box-shadow: 0px 0px 10px #949494;
+            }
+
+            .papertab-style{
+                /*margin: 0 5px; decommente si tu veux voir l'ombre sur les bords exterieurs des paper tab exterieur*/
             }
 
             .custom-slide {
@@ -61,7 +66,7 @@
             
         </style>
         <paper-tabs class="papertabs-style" selected="{{selected}}">
-            <paper-tab on-click="_activeChanged" class="papertabs-style">
+            <paper-tab on-click="_activeChanged" class="papertab-style">
                 <div class="container">
                     <img src="src/img/device.png" class="custom-slide" />
                     <span class="title-action"><h1>Choisir</h1></span>
@@ -69,7 +74,7 @@
                     <p>par nos musées partenaires.</p>
                 </div>
             </paper-tab>
-            <paper-tab on-click="_activeChanged" class="papertabs-style">
+            <paper-tab on-click="_activeChanged" class="papertab-style">
                 <div class="container">
                     <img src="src/img/ticket.png" class="custom-slide" />
                     <span class="title-action"><h1>Acheter</h1></span>
@@ -77,7 +82,7 @@
                     <p>pour profiter des réductions.</p>
                 </div>
             </paper-tab>
-            <paper-tab on-click="_activeChanged" class="papertabs-style">
+            <paper-tab on-click="_activeChanged" class="papertab-style">
                 <div class="container">
                     <img src="src/img/eyes.png" class="custom-slide" />
                     <span class="title-action"><h1>Visiter</h1></span>
