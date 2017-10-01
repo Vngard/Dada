@@ -5,9 +5,9 @@
     <template>
         <style>
              :host {
-                 width: 100%;
+                width: 100%;
                 height: auto;
-             }
+            }
 
             .flex-container {
                 padding: 0;
@@ -89,16 +89,16 @@
                 margin-right: 1em;
             }
 
-            .text-container{
-                display:block;
+            .text-container {
+                display: block;
                 margin-top: 2em;
                 -moz-box-shadow: 0px 3px 10px #D5D5D5;
                 -webkit-box-shadow: 0px 3px 10px #D5D5D5;
                 box-shadow: 0px 3px 10px #D5D5D5;
             }
 
-            .title{
-                font-size: 25px;
+            .title {
+                font-size: 20px;
                 font-weight: bold;
                 text-align: left;
             }
@@ -118,38 +118,51 @@
                 margin-bottom: 5em;
             }
 
-            .video-style{
+            .video-style {
                 margin-top: 3em;
                 margin-bottom: 4em;
             }
 
-            .payment-container{
+            .payment-container {
                 display: flex;
-                margin: 0 20% 0 20%;
+                margin: 0 12.5% 0 12.5%;
             }
 
-            .payment-style{
-                border:1px solid #B8B6B6;
+            .payment-style {
+                border: 1px solid #B8B6B6;
                 width: 100%;
                 height: 20em;
+                height: auto;
             }
 
-            .left-content{
-                float:left;
-                margin: 1em;
-                width: 40%;
+            .left-content {
+                float: left;
+                height: auto;
+                margin: 1em 0 1em 0;
+                width: 45%;
             }
 
-            .right-content{
-                float:right;
-                margin: 1em;
-                width: 60%;
+            .right-content {
+                float: right;
+                height: auto;
+                margin: 7em 0em 1em 0;
+                width: 55%;
             }
 
-            .date-style{
+            .date-style {
                 font-size: 12px;
             }
 
+            .umbrella-style {
+                width: 275px;
+                height: 350px;
+            }
+
+            p {
+                margin-left: 4em;
+                text-align: left;
+                font-size: 13px;
+            }
         </style>
 
         <img src="src/img/MAGRITTE-background.jpg" class="img-responsive"></img>
@@ -157,58 +170,62 @@
             <!--<div class="flex-item">-->
             <div class=img-responsive>
                 <div class="article-container">
-                        <div class="encart"><span class="title-news">Peinture</span></div>
-                        <span class="date-style margin-title"><img src="src/img/Fichier6.png" class="calendar-style" />21 Sept 2017 - 23 Jan 2018</span>
-                        <span class="margin-title"><img src="src/img/Fichier1.png" class="calendar-style" />Durée moyenne : 1h30</span>
-                        <span class="location-style margin-title"><img src="src/img/Fichier5.png" class="calendar-style" />Centre Pompidou</span>
+                    <div class="encart"><span class="title-news">Peinture</span></div>
+                    <span class="date-style margin-title"><img src="src/img/Fichier6.png" class="calendar-style" />21 Sept 2017 - 23 Jan 2018</span>
+                    <span class="margin-title"><img src="src/img/Fichier1.png" class="calendar-style" />Durée moyenne : 1h30</span>
+                    <span class="location-style margin-title"><img src="src/img/Fichier5.png" class="calendar-style" />Centre Pompidou</span>
 
-                        <div class="text-container">
-                            <img src="src/img/TEXTMAGRITTE.png"/>
+                    <div class="text-container">
+                        <img src="src/img/TEXTMAGRITTE.png" />
 
-                            <br/>
-                            <br/>
-                            <div class="video-style">
-                                <span class="title">Visionnez la bande annonce de l'exposition</span>
-                            </div>
-                            <video width="600" controls>
-                                <source src="src/img/POC-DADA.mp4" type="video/mp4">
-                                Your browser does not support HTML5 video.
-                            </video>
+                        <br/>
+                        <br/>
+                        <div class="video-style">
+                            <span class="title">Visionnez la bande annonce de l'exposition</span>
+                        </div>
+                        <video width="600" controls>
+                            <source src="src/img/POC-DADA.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+                        </video>
 
-                            <div class="video-style">
-                                <span class="title">Prenez vos places !</span>
-                            </div>
+                        <div class="video-style">
+                            <span class="title">Prenez vos places !</span>
+                        </div>
 
 
-                            <div class="payment-container">
-                                <div class="payment-style">
-                                    <div class="left-content">
-                                        plop
-                                    </div>
-                                    <div class="right-content">
-                                        <span class="title">Visite digitale immersive</span>
-                                        <span class="title">Magritte, la trahison des images</span>
-                                        <br/>
-                                        <span class="date-style margin-title"><img src="src/img/Fichier6.png" class="calendar-style" />21 Sept 2017 - 23 Jan 2018</span>
-                                        <span class="date-style margin-title"><img src="src/img/Fichier1.png" class="calendar-style" />Durée moyenne : 1h30</span>
-                                        <br />
-                                        <p>
-                                            Pour cette exposition,plus d'une centaine d'oeuvres du peintre surréaliste sont réunies dnas la salle du centre Pompidou, l'occasion d'une rétrospective tournée vers la trahison des images. Retrouvez les avec un contenu immersif et éductif dans cette e-visite.
-                                        </p>
-                                    </div>
+                        <div class="payment-container">
+                            <div class="payment-style">
+                                <div class="left-content">
+                                    <img src="src/img/parapluie.png" class="umbrella-style">
+                                </div>
+                                <div class="right-content">
+                                    <span class="title">Visite digitale immersive</span>
+                                    <span class="title">Magritte, la trahison des images</span>
+                                    <br/>
+                                    <span class="date-style margin-title"><img src="src/img/Fichier6.png" class="calendar-style" />21 Sept 2017 - 23 Jan 2018</span>
+                                    <span class="date-style margin-title"><img src="src/img/Fichier1.png" class="calendar-style" />Durée moyenne : 1h30</span>
+                                    <br />
+                                    <p>
+                                        Pour cette exposition,plus d'une centaine d'oeuvres du
+                                        peintre surréaliste sont réunies dnas la salle du Centre
+                                        Pompidou, l'occasion d'une rétrospective tournée vers la trahison des images. Retrouvez les avec un contenu immersif et éductif
+                                        dans cette e-visite.
+                                        trahison des images. Retrouvez les avec un contenu immersif et éductif dans cette e-visite.
+                                        immersif et éductif dans cette e-visite.
+                                    </p>
                                 </div>
                             </div>
+                        </div>
 
-                            <!--<div class="video-style">
+                        <!--<div class="video-style">
                                 <span class="title">En ce moment sur DADA</span>
                                 <dada-news></dada-news>
                             </div>-->
 
-                        </div>
-                        
+                    </div>
+
                 </div>
             </div>
-            
+
             <!--</div>-->
         </div>
     </template>
