@@ -3,14 +3,12 @@
 <dom-module id="dada-exposition">
     <template>
         <style>
-             :host {
-                
-            }
+             :host {}
 
             .flex-container {
                 padding: 0;
                 margin: 0;
-                margin-top: 2em;
+                margin-top: -2em;
                 list-style: none;
                 margin-bottom: 2em;
                 display: -webkit-box;
@@ -27,7 +25,7 @@
                 background: #fff;
                 width: 100%;
                 height: auto;
-                margin: 0 25% 0 25%;
+                margin: -95px 10px 0;
 
                 color: black;
                 font-weight: bold;
@@ -36,7 +34,7 @@
             }
 
             .article-container {
-                margin: -15px 10px 0;
+                margin: -115px 10px 0;
                 background-color: #fff;
                 position: relative;
                 z-index: 2;
@@ -52,31 +50,37 @@
                 height: 550px;
             }
 
-            .text-container{
+            .text-container {
                 display: flex;
                 justify-content: center;
             }
 
+            .title-news {
+                font-size: 25px;
+                text-align: justify;
+            }
+
+            .encart span {
+                position: relative;
+                top: -15px;
+                background-color: black;
+                color: white;
+                align-self: center;
+                font-size: 15px;
+                padding: 12px;
+            }
         </style>
-                <div class="flex-container">
-                        <div class="flex-item">
-                            <div class=img-responsive>
-                                <img src="src/img/MAGRITTE-backgroung.jpg" class="img-responsive"></img>
-                                    <div class="article-container">
-                                        <div class="encart"><span class="title-news">Peinture</span></div>
-                                        <span class="title-news">Magritte, La trahison</span>
-                                        <br/>
-                                        <span class="title-news">des images</span>
-                                        <br/>
-                                        <br/>
-                                        <img src="src/img/Fichier6.png" class="calendar-style" /><span class="date-style">21 Sept 2017 - 23 Jan 2018</span>
-                                        <br/>
-                                        <br/>
-                                        <img src="src/img/Fichier5.png" class="location-style" /><span class="date-style gradiant">Centre Pompidou</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+
+        <img src="src/img/MAGRITTE-background.jpg" class="img-responsive"></img>
+        <div class="flex-container">
+            <div class="flex-item">
+                <div class=img-responsive>
+                    <div class="article-container">
+                        <div class="encart"><span class="title-news">Peinture</span></div>
+                    </div>
+                </div>
+            </div>
+
     </template>
 
     <script>
@@ -97,6 +101,5 @@
         }
 
         window.customElements.define(DadaExposition.is, DadaExposition);
-
     </script>
 </dom-module>
