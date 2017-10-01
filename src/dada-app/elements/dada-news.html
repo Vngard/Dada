@@ -30,7 +30,6 @@
                 margin: auto;
                 margin-top: 10px;
 
-                line-height: 150px;
                 color: black;
                 font-weight: bold;
                 text-align: center;
@@ -62,7 +61,8 @@
                 position: relative;
                 z-index: 2;
                 text-align: center;
-                height: 10%;
+                height: 250px;
+
             }
 
             .flex-item:hover .article-container {
@@ -126,6 +126,20 @@
                 color:grey;
             }
 
+            .title-news{
+                font-size: 25px;
+            }
+
+            .encart span{
+                position: relative;
+                top:-15px;
+                background-color: black;
+                color:white;
+                align-self: center;
+                font-size: 15px;
+                padding: 3px;
+            }
+
         </style>
         <div>
             <h1>En ce moment...</h1>
@@ -135,8 +149,8 @@
                 <div class=img-responsive>
                     <img src="src/img/MAGRITTE.jpg" class="img-responsive"></img>
                     <div class="article-container">
-                        <span class="title-news">Magritte, La trahison<span class="title-news">
-                        <span class="title-news">des images</span>
+                        <div class="encart"><span class="title-news">Magritte</span></div>
+                        <span class="title-news">Magritte, La trahison des images</span>
                     </div>
                 </div>
             </div>
